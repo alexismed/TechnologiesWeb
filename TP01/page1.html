@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="ISO-8859-1"/>
+		<meta name="author" content="auteur"/>
+		<title>TP: Convertisseur</title>
+		<link rel="stylesheet" type="text/css" href="styles/page1.css">
+		<script type="text/javascript" src="scripts/script1.js"></script>
+	</head>
+	<body>
+		<div>
+			<form>
+				<table>
+					<tr>
+						<th colspan="3">Convertisseur</th>
+					</tr>
+					<tr>
+						<td><img src="images/euro.png" height ="100px" alt="Symbole Euro"/></td>
+						<td>Euros</td>
+						<td><input type="number" id="idEuro" value = "10" step="0.01" oninput ="convertir()" /></td>
+					</tr>
+					<tr>
+						<td><img src="images/dollar.png" height ="100px" alt="Symbole dollar"/></td>
+						<td>Dollar Americain</td>
+						<td><input type="number" id="idUs" step="0.01" disabled /></td>
+					</tr>
+					<tr>
+						<td><img src="images/kang.png" height ="100px" alt="Kangourou"/></td>
+						<td>Dollar Australien</td>
+						<td><input type="number" id="idAus" step="0.01" disabled /></td>
+					</tr>
+				</table>
+				<!-- <p><input type="button" onclick="convertir()" value="Convertir"></p> -->
+			</form>
+		</div>
+		<script>convertir()</script>
+	</body>
+</html>

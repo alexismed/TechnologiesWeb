@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="ISO-8859-1"/>
+		<meta name="author" content="auteur"/>
+		<title>TP: Formulaires</title>
+		<script type="text/javascript" src="scripts/script2.js"></script>
+	</head>
+	<body>
+		<h2>S&eacute;lectionnez quoi afficher</h2>
+		<p> Liens et images<input type="checkbox" value="0" onclick="afficherDiv(this)"> </p>
+		<p> Des &eacute;l&eacute;ments<input type="checkbox" value="1" onclick="afficherDiv(this)"></p>
+		<p> Barres de progression <input type="checkbox" value="2" onclick="afficherDiv(this)"></p>
+		<hr>
+		<div id="liens"> 
+			<h1>Lien et images</h1>
+			<p><a href="https://www.wikipedia.org/">La page principale de Wikipedia</a></p>
+			<p><img src="images/google.png" width="270px" alt="Logo Google"/></p>
+		</div>
+		<hr>
+		<div id="elements">
+			<h1>Des &eacute;l&eacute;ments !</h1>
+			<form>
+				<p><input type="text" value="Premiers pas avec Javascript"  size="30em" /> </p>
+				<p>
+					<input type="radio" name="choix" value="HP" id="ch1" onclick="auChoix(this)"> Choix N&#176; 1 
+					<input type="radio" name="choix" value="Casque" onclick="auChoix(this)"> Choix N&#176; 2
+					<input type="radio" name="choix" value="Bluetooth" onclick="auChoix(this)"> Choix N&#176; 3
+				</p>
+				<p><input type="password" value="password"> </p>
+				<p>
+					<input type="range" min="1" max="11" value="5" oninput="afficherVolume()"> Volume
+					<br> 0 
+				</p>
+				<p>Une case &agrave; cocher <input type="checkbox" onclick="mute(this)" id="muteBox"> </p>
+				<p>Date: <input type="date" onchange="afficherAnnee(this)"> </p>
+				<input type="button" value="Ok" onclick="verifierTexte()">
+			</form>
+		</div>
+		<hr>
+		<div id="barres">
+			<h1>Barres de progression</h1>
+			<p>
+				<label for="file">T&eacute;l&eacute;chargement en cours: </label>
+				<progress id="file" value="50" max="100"> </progress>
+			</p>
+			<p>
+				<label for="espace_dispo">Espace disponible :</label>
+				<meter id="espace_dispo" value="0.5"></meter>
+			</p>
+		</div>
+		<script>start();</script>
+	</body>
+</html>
